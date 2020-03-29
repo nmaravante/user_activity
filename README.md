@@ -3,7 +3,7 @@ user_activity
 
 1.install virtual environment
 
-apt-get install python3-venv
+ sudo apt-get install python3-venv
 
 2. activate virtual environment
 
