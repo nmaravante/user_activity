@@ -18,7 +18,16 @@ def Profile_Activity(request):
         profile = Profile.objects.all()
         print(profile)
         serializer = ProfileSerializer(profile, many=True)
-        return Response(serializer.data)
+        return Response({"ok":True,"members":serializer.data})
 
 
+##### class based views
 
+class ActivityList(APIView):
+    """
+    List all documents, or create a new document.
+    """
+    def get(self, request, format=None):
+        profile = Profile.objects.all()
+        serializer = ProfileSerializer(profile, many=True)
+        return Response({"ok":True,"members":serializer.data})

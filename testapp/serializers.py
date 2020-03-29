@@ -7,7 +7,7 @@ from testapp.models import *
 class ActivitySerializer(serializers.ModelSerializer):
     class Meta:
         model = ProfileActivity
-        fields = ['start_date','end_date',]
+        fields = ['activity_start_date','start_date','end_date',]
 
 
 #########################         StringRelatedField  #####
